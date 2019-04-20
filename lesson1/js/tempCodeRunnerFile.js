@@ -1,16 +1,21 @@
-let chislo = 33721;
-let massav = [];
-let proisv = 1;
+  let money = prompt("Введите свой месячный бюджет", 1000),
+      time = prompt("Введите дату в формате YYYY-MM-DD", "2019-04-20"),
+      catalog1 = [prompt("Введите через запятую список обязательных расходов", "молоко"), 
+      catalog2 = prompt("Введите через запятую список обязательных расходов", "чай")],
+      cost1 = [prompt("Введите затраты на обязательные расходы", 100), 
+      cost2 = prompt("Введите затраты на обязательные расходы", 150)],
+      income = [];
 
-for (var i = 0; chislo != 0; i++) {
-  massav[i] = chislo % 10;
-  chislo = Math.floor(chislo / 10);
-}
+  let appData = {
+      budget: money,
+      timeData: time,
+      expenses: {},
+      optionalExpenses : {},
+      spinOff: income,
+      savings: false
+  };
 
-console.log(massav);
+  appData.expenses[catalog1] = cost1;
+  appData.expenses[catalog2] = cost2;
 
-for (var j = 0; j < massav.length; j++) {
-  proisv *= massav[j];
-}
-
-console.log(proisv);
+  console.log(appData);
