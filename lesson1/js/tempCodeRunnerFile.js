@@ -1,19 +1,16 @@
-function main() {
-  'use strict';
+let chislo = 33721;
+let massav = [];
+let proisv = 1;
 
-  let money = prompt("Please enter your name", "");
-  let time = "12-02-2019";
-  let income = [];
-
-  let appData = {
-    budget: money,
-    timeData: time,
-    optionalExpenses : {},
-    spinOff: income,
-    savings: false
-  };
-
-  console.log(money);
+for (var i = 0; chislo != 0; i++) {
+  massav[i] = chislo % 10;
+  chislo = Math.floor(chislo / 10);
 }
 
-main();
+console.log(massav);
+
+for (var j = 0; j < massav.length; j++) {
+  proisv *= massav[j];
+}
+
+console.log(proisv);
