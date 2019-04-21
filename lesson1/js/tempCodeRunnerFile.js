@@ -1,9 +1,10 @@
+function main() {
+  'use strict';
+
   let money = prompt("Введите свой месячный бюджет", 1000),
       time = prompt("Введите дату в формате YYYY-MM-DD", "2019-04-20"),
-      catalog1 = [prompt("Введите через запятую список обязательных расходов", "молоко"), 
-      catalog2 = prompt("Введите через запятую список обязательных расходов", "чай")],
-      cost1 = [prompt("Введите затраты на обязательные расходы", 100), 
-      cost2 = prompt("Введите затраты на обязательные расходы", 150)],
+      catalog = [prompt("Введите через запятую список обязательных расходов", "молоко"), prompt("Введите через запятую список обязательных расходов", "чай")],
+      cost = [prompt("Введите затраты на обязательные расходы", 100), prompt("Введите затраты на обязательные расходы", 150)],
       income = [];
 
   let appData = {
@@ -15,7 +16,17 @@
       savings: false
   };
 
-  appData.expenses[catalog1] = cost1;
-  appData.expenses[catalog2] = cost2;
+  appData.expenses[catalog[0]] = cost[0];
+  appData.expenses[catalog[1]] = cost[1];
 
   console.log(appData);
+  console.log(appData.budget / 30);
+
+  // document.getElementById("demo").innerHTML = "Месячный бюджет составляет " + appData.budget + "$";
+  // document.getElementById("demo2").innerHTML = "Сегодняшняя дата: " + appData.timeData;
+  // document.getElementById("demo3").innerHTML = "Тогда обязательные расходы -> " + appData.expenses.catalog + " : " + appData.expenses.cost;  
+  // document.getElementById("demo4").innerHTML = "А значит бюджет на один день должен составить " + ((appData.budget - appData.expenses.cost) / 30) + "$";
+
+}
+
+main();
