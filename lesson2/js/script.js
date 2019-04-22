@@ -15,38 +15,31 @@ function main() {
     };
 
     /* Это цикл for!!!  */
-    let catalog = [prompt("Введите обязательную статью расходов в этом месяце", "молоко"), prompt("Введите обязательную статью расходов в этом месяце", "хлеб")],
-        cost = [prompt("Во сколько обойдется?", 100), prompt("Во сколько обойдется?", 80)];
-
         for (let i = 0; i < 2; i++) {
-            catalog[i];
-            cost[i];
+          let catalog = prompt("Введите обязательную статью расходов в этом месяце", "молоко"),
+              cost = prompt("Во сколько обойдется?", 100);
 
-          if ((typeof(catalog[i])) === 'string' && (typeof(catalog[i])) != null && (typeof(cost[i])) != null
-              && catalog[i] != '' && cost[i] != '' && catalog[i].length < 50) {
+          if ( (typeof(catalog)) === 'string' && (typeof(catalog)) != null && (typeof(cost)) != null
+              && catalog != '' && cost != '' && catalog.length < 50) {
               console.log("done!!!");
-              appData.expenses[catalog[i]] = cost[i];
+              appData.expenses[catalog] = cost;
           } else {
-            i = i - 1;
-            // alert("Вы либо не ввели данные либо ввели не правильно! проверьте и попробуйте снова! ");
-            //     catalog[i+2] = prompt("Введите обязательную статью расходов в этом месяце", "мясо"); 
-            //     cost[i+2] = prompt("Во сколько обойдется?", 200);    
-            //   appData.expenses[catalog[i+2]] = cost[i+2];   
+            i--;  
           }  
-    }
+        }
 
     /* это цикл while предусловие */
     // let i = 0;
     // while (i < 2) {
-    //   let catalog = [prompt("Введите обязательную статью расходов в этом месяце", "молоко")],
-    //       cost = [prompt("Во сколько обойдется?", 100)];
+    //   let catalog = prompt("Введите обязательную статью расходов в этом месяце", "молоко"),
+    //       cost = prompt("Во сколько обойдется?", 100);
 
-    //   if ((typeof(catalog[i])) === 'string' && (typeof(catalog[i])) != null && (typeof(cost[i])) != null
-    //       && catalog[i] != '' && cost[i] != '' && catalog[i].length < 50) {
+    //   if ((typeof(catalog)) === 'string' && (typeof(catalog)) != null && (typeof(cost)) != null
+    //       && catalog != '' && cost != '' && catalog.length < 50) {
     //       console.log("done!!!");
-    //       appData.expenses[catalog[i]] = cost[i];
+    //       appData.expenses[catalog] = cost;
     //   } else {
-    //        i = i - 1;
+    //        i--;
     //   }  
     //   i++;
     // }
@@ -54,15 +47,15 @@ function main() {
     /* это цикл do постусловие*/
     // let i = 0;  
     // do {
-    //   let catalog = [prompt("Введите обязательную статью расходов в этом месяце", "молоко")],
-    //       cost = [prompt("Во сколько обойдется?", 100)];
+    //   let catalog = prompt("Введите обязательную статью расходов в этом месяце", "молоко"),
+    //       cost = prompt("Во сколько обойдется?", 100);
 
-    //   if ((typeof(catalog[i])) === 'string' && (typeof(catalog[i])) != null && (typeof(cost[i])) != null
-    //       && catalog[i] != '' && cost[i] != '' && catalog[i].length < 50) {
+    //   if ((typeof(catalog)) === 'string' && (typeof(catalog)) != null && (typeof(cost)) != null
+    //       && catalog != '' && cost != '' && catalog.length < 50) {
     //       console.log("done!!!");
-    //       appData.expenses[catalog[i]] = cost[i];
+    //       appData.expenses[catalog = cost;
     //   } else {
-    //        i = i - 1;
+    //        i--;
     //   }
     //   i++;
     // }
