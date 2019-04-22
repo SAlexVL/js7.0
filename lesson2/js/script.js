@@ -19,8 +19,8 @@ function main() {
         cost = [prompt("Во сколько обойдется?", 100), prompt("Во сколько обойдется?", 80)];
 
         for (let i = 0; i < 2; i++) {
-          catalog[i];
-          cost[i];
+            catalog[i];
+            cost[i];
 
           if ((typeof(catalog[i])) === 'string' && (typeof(catalog[i])) != null && (typeof(cost[i])) != null
               && catalog[i] != '' && cost[i] != '' && catalog[i].length < 50) {
@@ -41,13 +41,12 @@ function main() {
     //   let catalog = [prompt("Введите обязательную статью расходов в этом месяце", "молоко")],
     //       cost = [prompt("Во сколько обойдется?", 100)];
 
-    //   if ((typeof(catalog[0])) === 'string' && (typeof(catalog[0])) != null && (typeof(cost[0])) != null
-    //       && catalog[0] != '' && cost[0] != '' && catalog[0].length < 50) {
+    //   if ((typeof(catalog[i])) === 'string' && (typeof(catalog[i])) != null && (typeof(cost[i])) != null
+    //       && catalog[i] != '' && cost[i] != '' && catalog[i].length < 50) {
     //       console.log("done!!!");
-    //       appData.expenses[catalog[0]] = cost[0];
+    //       appData.expenses[catalog[i]] = cost[i];
     //   } else {
-    //     alert("Вы либо не ввели данные либо ввели не правильно! проверьте и попробуйте снова! ");
-    //     break;
+    //        i = i - 1;
     //   }  
     //   i++;
     // }
@@ -58,13 +57,12 @@ function main() {
     //   let catalog = [prompt("Введите обязательную статью расходов в этом месяце", "молоко")],
     //       cost = [prompt("Во сколько обойдется?", 100)];
 
-    //   if ((typeof(catalog[0])) === 'string' && (typeof(catalog[0])) != null && (typeof(cost[0])) != null
-    //       && catalog[0] != '' && cost[0] != '' && catalog[0].length < 50) {
+    //   if ((typeof(catalog[i])) === 'string' && (typeof(catalog[i])) != null && (typeof(cost[i])) != null
+    //       && catalog[i] != '' && cost[i] != '' && catalog[i].length < 50) {
     //       console.log("done!!!");
-    //       appData.expenses[catalog[0]] = cost[0];
+    //       appData.expenses[catalog[i]] = cost[i];
     //   } else {
-    //     alert("Вы либо не ввели данные либо ввели не правильно! проверьте и попробуйте снова! ");
-    //     break;
+    //        i = i - 1;
     //   }
     //   i++;
     // }
