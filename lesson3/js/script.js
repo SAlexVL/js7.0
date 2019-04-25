@@ -10,7 +10,8 @@ function main() {
       numberObl = +prompt("Введите количество позиций обязательных расходов в чеке на сегодня", 2);
       numberNotObl = +prompt("Введите количество позиций необязательных расходов в чеке на сегодня", 3);
 
-      while(isNaN(money) || isNaN(numberObl) || isNaN(numberNotObl) || money == "" || numberObl == "" || numberNotObl =="" || money == null || numberObl == null || numberNotObl == null) {
+      while(isNaN(money) || isNaN(numberObl) || isNaN(numberNotObl) || money == "" || numberObl == "" || numberNotObl =="" 
+        || money == null || numberObl == null || numberNotObl == null) {
         money = +prompt("Введите свой месячный бюджет", 1000);
         numberObl = +prompt("Введите количество позиций обязательных расходов в чеке на сегодня", 2);
         numberNotObl = +prompt("Введите количество позиций необязательных расходов в чеке на сегодня", 3);
@@ -47,12 +48,10 @@ function main() {
    // дневной необязательный чек
    function chooseOptExpenses() {
     for (let i = 0; i < numberNotObl; i++) {
-      let catalog = prompt("Введите статью необязательных расходов в этом месяце", "кино"),
-          cost = prompt("Во сколько обойдется?", 20);
+      let catalog = prompt("Введите статью необязательных расходов в этом месяце", "кино");
 
-      if ( (typeof(catalog)) === 'string' && (typeof(catalog)) != null && (typeof(cost)) != null
-          && catalog != '' && cost != '' && catalog.length < 50) {
-          appData.expenses[catalog] = cost;
+      if ( (typeof(catalog)) === 'string' && catalog.length < 50) {
+          appData.expenses[i+1] = catalog;
       } else {
           i--;  
         }  
