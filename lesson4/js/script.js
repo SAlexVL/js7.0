@@ -1,5 +1,5 @@
-function main() {
-  'use strict';
+// function main() {
+//   'use strict';
 
   // переменные для start()
   let money, time; 
@@ -74,7 +74,7 @@ function main() {
     chooseIncome: function() {
       let items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
       if ( typeof(items) === 'string' && items != '') {   // Проверка строки на содержание (1 задание)
-            appData.income = items.split(', ');
+            appData.income = items.split(',');
             appData.income.push(prompt("может что-то еще?"));
             appData.income.sort();
       }  else {                                            // Если неверно, то повторяем ввод (1 задание)
@@ -97,5 +97,5 @@ function main() {
         console.log('Наша программа включает в себя данные:' + key + ' имеет значение ' + appData[key]);
       }
 
-}
-main();
+// }
+// main();
