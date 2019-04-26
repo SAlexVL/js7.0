@@ -1,38 +1,23 @@
 function main() {
   'use strict';
 
-  let str = "урок-3-был слишком легким",
-      str2 = "",
-      str3 = "";  
   // --------1---------
-  str2 = str.split('');
-  str2[0] = str[0].toUpperCase();
-  str3 = str2.join('');
-  console.log(str3);
+  let str = "урок-3-был слишком легким",
+  newStr = str.charAt(0).toUpperCase() + str.slice(1);
+  console.log(newStr);
   // --------2--------
-  for (let i = 0; i < str.length; i++) {
-    if (str2[i] == "-") {
-      delete str2[i];
-      str2[i] = " ";
-    }
-  }
-  str3 = str2.join('');
-  console.log(str3);
-  // --------3 a--------
-  str3 = str3.split(' ');
-  let removed = str3.splice(4, 4);
-  console.log(str3.join(' '));
-  // --------3 b--------
-  str2 = removed[0].split('');
-  str2[4] = str2[5] = "o";
-  console.log(str2.join(''));
+  let replaceStr = newStr.replace(/-/g, ' ');
+  console.log(replaceStr);
+  // --------3--------
+  let newNewStr = str.slice(str.indexOf("легким")).replace("им", "оо");
+  console.log(newNewStr);
   //--------4--------
   let arr = [20, 33, 1, "Человек", 2, 3];
-  arr.splice(3, 1);
   let sum = 0;
-  for (let j = 0; j < 5; j++) {
-    arr[j] = arr[j]**3;
-    sum += arr[j];
+  for (let j = 0; j < arr.length; j++) {
+    if (!isNaN(arr[j])) {
+      sum += Math.pow(arr[j],3);
+    }
   }
   console.log(Math.sqrt(sum).toFixed(3));
   //--------5--------

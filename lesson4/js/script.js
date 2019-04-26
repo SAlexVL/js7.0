@@ -7,13 +7,9 @@ function main() {
   function start() {
       money = +prompt("Введите свой месячный бюджет", 1000);
       time = prompt("Введите дату в формате YYYY-MM-DD", "2019-04-20");
-      // numberObl = +prompt("Введите количество позиций обязательных расходов в чеке на сегодня", 2);
-      // numberNotObl = +prompt("Введите количество позиций необязательных расходов в чеке на сегодня", 3);
 
       while(isNaN(money) || money == "" || money == null) {
         money = +prompt("Введите свой месячный бюджет", 1000);
-        // numberObl = +prompt("Введите количество позиций обязательных расходов в чеке на сегодня", 2);
-        // numberNotObl = +prompt("Введите количество позиций необязательных расходов в чеке на сегодня", 3);
       }
   } 
   start();
@@ -83,6 +79,6 @@ function main() {
     }
   };  
 
-  console.log(appData);
+  // console.log(appData);
 }
 main();
