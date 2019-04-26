@@ -2,7 +2,7 @@ function main() {
   'use strict';
 
   // переменные для start()
-  let money, time, numberObl, numberNotObl; 
+  let money, time; 
    // начальные вопросы   
   function start() {
       money = +prompt("Введите свой месячный бюджет", 1000);
@@ -14,7 +14,7 @@ function main() {
   } 
   start();
    // объект для chooseExpenses() 
-   let appData = {
+   var appData = {
     budget: money,
     timeData: time,
     expenses: {},
@@ -73,12 +73,29 @@ function main() {
     },
     chooseIncome: function() {
       let items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
-      appData.income = items.split(', ');
-      appData.income.push(prompt("может что-то еще?"));
-      appData.income.sort();
+      if ( typeof(items) === 'string' && items != '') {   // Проверка строки на содержание (1 задание)
+            appData.income = items.split(', ');
+            appData.income.push(prompt("может что-то еще?"));
+            appData.income.sort();
+      }  else {                                            // Если неверно, то повторяем ввод (1 задание)
+        alert("Вы  ввели неверные данные, попробуйте снова");
+        while (items == null || items == '') {
+          items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
+        }
+      }
+      // вывод на экран Способы доп. заработка (2 задание)
+      appData.income.forEach(function(items, i) {
+      alert("Способы доп. заработка: " + (i+1) + "." + items);        
+      });
     }
   };  
 
   // console.log(appData);
+  // console.log(appData.chooseIncome());
+
+      for (let key in appData) {
+        console.log('Наша программа включает в себя данные:' + key + ' имеет значение ' + appData[key]);
+      }
+
 }
 main();
