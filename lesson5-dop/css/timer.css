@@ -1,0 +1,18 @@
+.time{
+  text-align: center;
+  font-size: 60px;
+  margin-top: 6%;
+  color: red;
+}
+
+.day {
+  text-align: center;
+  font-size: 50px;
+  margin-top: 3%;
+  color: green;  
+}
+
+.date {
+  text-align: center;
+  margin-top: 3%;
+}
